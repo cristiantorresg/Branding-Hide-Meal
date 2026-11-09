@@ -1,0 +1,70 @@
+/* =========================================================
+   HIDE MEAL — Tokens de marca para la web
+   Around the experience
+   ---------------------------------------------------------
+   Uso: <link rel="stylesheet" href="brand.css"> antes de tu CSS.
+   Luego usa las variables: color: var(--hm-crema);
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;600;700;800&display=swap");
+
+:root {
+  /* ---------- Colores base (60-30-10) ---------- */
+  --hm-carbon:   #312E2C;  /* fondo principal (60%) */
+  --hm-negro:    #000000;  /* fondo alterno / alto contraste */
+  --hm-crema:    #E4E2DD;  /* texto y logotipo (30%) */
+  --hm-blanco:   #FFFFFF;
+
+  /* ---------- Franjas retro (acentos, 10%) ---------- */
+  --hm-turquesa: #0097B2;  /* enlaces, info, estados activos */
+  --hm-ladrillo: #992800;  /* hover de botones, alertas suaves */
+  --hm-naranja:  #D34A24;  /* botón principal / CTA */
+  --hm-mostaza:  #FFAF00;  /* precios, destacados, badges */
+
+  /* ---------- Tonos de apoyo para la interfaz ---------- */
+  --hm-carbon-2: #3D3A37;  /* tarjetas sobre fondo carbón */
+  --hm-carbon-3: #4A4642;  /* bordes y divisores */
+  --hm-crema-2:  #B9B6AF;  /* texto secundario sobre carbón */
+
+  /* ---------- Tipografía ---------- */
+  --hm-font-display: "Archivo Black", "Arial Black", sans-serif; /* títulos */
+  --hm-font-body:    "Montserrat", Arial, sans-serif;            /* texto */
+  --hm-tracking-tag: 0.3em;  /* espaciado tipo "AROUND THE EXPERIENCE" */
+
+  --hm-fs-hero: clamp(2.5rem, 6vw, 5rem);
+  --hm-fs-h1:   clamp(2rem, 4vw, 3rem);
+  --hm-fs-h2:   1.75rem;
+  --hm-fs-h3:   1.25rem;
+  --hm-fs-body: 1rem;
+  --hm-fs-small: 0.8125rem;
+
+  /* ---------- Forma y espacio ---------- */
+  --hm-radius-sm: 6px;
+  --hm-radius:    12px;
+  --hm-radius-lg: 24px;
+  --hm-space:     8px;   /* múltiplos: calc(var(--hm-space) * 3) = 24px */
+
+  /* ---------- Motivo: las 4 franjas ---------- */
+  --hm-franjas: linear-gradient(
+    to bottom,
+    var(--hm-turquesa) 0 19%, transparent 19% 27%,
+    var(--hm-ladrillo) 27% 46%, transparent 46% 54%,
+    var(--hm-naranja) 54% 73%, transparent 73% 81%,
+    var(--hm-mostaza) 81% 100%
+  );
+}
+
+/* Utilidad: bloque decorativo con las 4 franjas del logo.
+   <div class="hm-franjas"></div>  (dale ancho y alto con tu CSS) */
+.hm-franjas {
+  background: var(--hm-franjas);
+  min-height: 40px;
+}
+
+/* Utilidad: texto estilo eslogan */
+.hm-tagline {
+  font-family: var(--hm-font-body);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--hm-tracking-tag);
+}
